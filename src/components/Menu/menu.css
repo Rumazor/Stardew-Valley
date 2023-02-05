@@ -2,6 +2,7 @@
 @font-face {
     font-family: 'Stardew-Valley_Menu';
     src: url('../../fonts/Stardew_Valley_Menu_Font.ttf');
+    
 }
 
 backgroundMenu {
@@ -31,3 +32,4 @@ content: ' ';
     font-family: 'Stardew-Valley_Menu',sans-serif;
     font-weight: 500;
 }
+
