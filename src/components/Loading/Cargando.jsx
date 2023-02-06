@@ -1,6 +1,8 @@
+
 import React, { useState } from "react";
 
-const LoadingDot1 = () => (
+
+const LoadingDot1 = (...props) => (
   <svg
     width={349}
     height={72}
@@ -46,9 +48,10 @@ const LoadingDot1 = () => (
       />
     </defs>
   </svg>
+
 );
 
-const LoadingDot2 = () => (
+const LoadingDot2 = (...props) => (
   <svg
     width={349}
     height={72}
@@ -96,8 +99,8 @@ const LoadingDot2 = () => (
   </svg>
 );
 
-const LoadingDot3 = () => (
-  <svg
+const LoadingDot3 = (...props) => (
+    <svg
     width={349}
     height={72}
     fill="none"
