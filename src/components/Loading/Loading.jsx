@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import LoadingBox from '../../assets/Loading.svg'
 import { playSound } from '../../helpers/playSound'
-import FallMusic from '../../music/Fall.ogg'
+
+import Summer from '../../music/Summer.ogg'
 
 const Loading = () => {
   const [fade, setFade,] = useState(true)
@@ -12,7 +13,7 @@ const Loading = () => {
 
 
         setTimeout(()=>{
-            playSound(FallMusic)
+            playSound(Summer)
             navigate('/farm')
         },3000)
 
@@ -23,7 +24,7 @@ const Loading = () => {
       },2000)
       
 
-    },[navigate,setFade])
+    },[navigate])
 
 
   return (
