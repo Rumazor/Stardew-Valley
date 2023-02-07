@@ -30,7 +30,6 @@ const Loading = () => {
 
   return (
     <div className='bg-black h-screen'>
-        {/* <img src={LoadingBox} className={` ${!fade && 'animate__animated animate__fadeOut'}  absolute w-60 md:w-auto  bottom-4 left-4`} alt="Loading" /> */}
         <Cargando/>
     </div>
   )

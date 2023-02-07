@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {AiOutlineLinkedin, AiOutlineGithub , AiOutlineTwitter} from 'react-icons/ai'
+import {SiKofi} from 'react-icons/si'
 
 import bigSelect from '../../music/bigSelect.wav'
 import bigDeSelect from '../../music/bigDeSelect.wav'
@@ -12,6 +13,7 @@ import backButton from '../../assets/backButton.svg'
 import RumaRoute from '../../assets/RumaRoute.svg'
 import RaquelRoute from '../../assets/RaquelRoute.svg'
 import './menu.css'
+import LoadingTips from '../Loading/LoadingTips'
 
 const Menu = () => {
 const [loading, setLoading] = useState(true)
@@ -30,23 +32,21 @@ audio.play();
 useEffect(()=>{
 setTimeout(() => {
 setLoading(false)
-}, 3500);
+}, 4500);
 
 setTimeout(()=>{
 setLoadingBar(false)
 playAudio(bigSelect)
-},2500)
+},3500)
 
 },[])
 
 const navigate = useNavigate()
 if(loading) {
 return <div className={` bg-black h-screen `}>
-  {/* <img src={LoadingBox} className={ ` ${!loadingBar && 'animate__animated animate__fadeOut' } absolute w-60
-    md:w-auto bottom-4 left-4`} alt="Loading" /> */}
-  <div>
+    <LoadingTips/>
     <Cargando />
-  </div>
+  
 </div>
 }
 
@@ -124,6 +124,9 @@ return (
           </a>
           <a href="https://twitter.com/ruma2084" target='_blank' rel="noreferrer">
             <AiOutlineTwitter className='hover:brightness-150' />
+          </a>
+          <a href="https://ko-fi.com/rumazor" target='_blank' rel="noreferrer">
+            <SiKofi className='hover:brightness-150' />
           </a>
 
         </div>
