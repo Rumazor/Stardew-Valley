@@ -98,20 +98,6 @@ return (
           </div>
           )}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
         <div
           className='flex justify-center items-center gap-2 text-[#531A12] mt-8 text-4xl animate__animated animate__fadeInUp animate__slower  '>
