@@ -33,3 +33,19 @@ content: ' ';
     font-weight: 500;
 }
 
+
+.modal {
+background: transparent
+}
+
+.modal::after{
+content: ' ';
+    display: block;
+    width:100%;
+    height: 100%;
+    z-index: 99;
+    background: url('../../assets/Modal.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center
+}
