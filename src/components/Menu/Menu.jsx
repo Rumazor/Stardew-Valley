@@ -46,7 +46,6 @@ if(loading) {
 return <div className={` bg-black h-screen `}>
     <LoadingTips/>
     <Cargando />
-  
 </div>
 }
 
@@ -61,7 +60,6 @@ return (
           <button className='animate__animated animate__fadeInUp animate__slower' onClick={()=>{
             playAudio(bigSelect)
             handleOpen()
-            // navigate("/Loading")
             }}>
             <img src={loadGame} className='cursor-pointer transition-all cursorLoad w-full max-w-[9.25rem] hover:brightness-110 hover:scale-110'
               alt="load game" />
@@ -77,14 +75,17 @@ return (
             <div
               className="bg-white rounded-lg shadow-xl transform transition-all sm:max-w-lg sm:w-full modal h-[31.1875rem] min-w-[52rem]  ">
            
-                  <img src={RumaRoute} className='absolute top-0 p-3 right-0 left-0 hover:brightness-110 transition-all cursorLoad' alt="Ruma" />
+         
+                  <img src={RumaRoute}  className='absolute top-0 p-3 right-0 left-0 hover:brightness-110 transition-all cursorLoad' alt="Ruma" />
                   
            
-                  <img src={RaquelRoute} className='absolute top-[7.56rem] p-3 right-0 left-0 hover:brightness-110 transition-all cursorLoad' alt="Ruma" />
-                  
-             
+                  <img src={RaquelRoute}              
             
-             
+             onClick={  () =>{
+                     navigate("/Loading")
+                  }}
+  className='absolute top-[7.56rem] p-3 right-0 left-0 hover:brightness-110 transition-all cursorLoad' alt="Ruma" />
+                  
 
             </div>
              <button type="button"

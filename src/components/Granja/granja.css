@@ -6,14 +6,18 @@
 
 
 
-
-.backgroundImage {
-height: 100vh;
-background-color: #000;
-
+.farm-font {
+    font-family: 'Stardew-Valley',sans-serif;
 }
 
-.backgroundImage::before{
+
+ /* SCENES */
+
+.farmScene {
+height: 100vh;
+background-color: #000;
+}
+.farmScene::before{
 content: ' ';
     display: block;
     position: absolute;
@@ -23,16 +27,35 @@ content: ' ';
     height: 100%;
     z-index: 0;
     opacity: 0.7;
-    background: url('../../assets/Mashwim_2-3-2023_74057215.png');
+    background: url('../../assets/Scenes/farmScene.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
 }
 
-.farm-font {
-    font-family: 'Stardew-Valley',sans-serif;
+.townScene {
+height: 100vh;
+background-color: #000;
+transition: all .4s ease-in-out;
 }
 
+.townScene::before{
+content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.7;
+    background: url('../../assets/Scenes/townScene.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    transition: all .8s ease-in-out;
+    filter: blur(2px);
+}
 
 
 
