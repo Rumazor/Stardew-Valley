@@ -2,7 +2,7 @@ import React, { useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { playSound } from '../../helpers/playSound'
-import Cargando from '../Loading/Cargando'
+import LoadingAnimation from '../Loading/LoadingAnimation'
 
 import Summer from '../../music/Summer.ogg'
 import LoadingTips from './LoadingTips'
@@ -26,8 +26,8 @@ const Loading = () => {
 
   return (
     <div className='bg-black h-screen'>
-       <LoadingTips/>
-        <Cargando/>
+        <LoadingTips/>
+        <LoadingAnimation/>
     </div>
   )
 }

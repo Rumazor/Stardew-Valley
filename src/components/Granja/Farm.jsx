@@ -75,7 +75,7 @@ switch (index) {
               <p className=' absolute max-w-[12.25rem] top-2 left-4 bottom-0 text-sm text-[#531A12] md:text-3xl md:left-6 md:top-4 md:max-w-[26rem]'>{displayText }</p>
         <img src={Ruma} className='absolute top-6 right-16 w-7 md:w-12 md:top-12 md:right-[8.3rem]' alt="Ruma" />
         <p className='absolute right-[4.75rem] bottom-[2.225rem] text-sm text-[#531A12] font-semibold md:text-3xl md:right-32 md:bottom-6'>Ruma</p>
-      {index + 1 <  dialog.length && <button className='absolute left-0 right-0 ' onClick={handleClick}><img src={dialogButton} className='' alt="" /></button>}
+      {index + 1 <  dialog.length && <button className='absolute w-8 h-4 top-[76%]  animate-pulse bottom-0 right-[42%]  ' onClick={handleClick}><img src={dialogButton} className='absolute' alt="" /></button>}
         
       </div>
        </div>
