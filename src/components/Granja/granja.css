@@ -15,7 +15,7 @@
 
 .farmScene {
 height: 100vh;
-background-color: #000;
+
 }
 .farmScene::before{
 content: ' ';
@@ -62,7 +62,7 @@ height: 100vh;
 
 }
 .farmSceneUndone::before{
-content: ' ';
+content: '';
     display: block;
     position: absolute;
     left: 0;
@@ -172,7 +172,7 @@ content: ' ';
 .marriageScene {
 height: 100vh;
   opacity: 0;
-  animation: fadeIn 5s ease-in-out forwards;
+  animation: fadeIn 7s ease-in-out forwards;
 }
 .marriageScene::before{
 content: ' ';
@@ -196,8 +196,10 @@ content: ' ';
 @keyframes fadeIn {
   0% {
     opacity: 0;
+       filter: blur(2px);
   }
   100% {
     opacity: 1;
+       filter: blur(0px);
   }
 }

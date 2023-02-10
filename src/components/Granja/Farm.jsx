@@ -8,6 +8,7 @@ import './granja.css'
 import { useState } from 'react'
 import SmallSelect from '../../music/smallSelect.wav'
 import { playSound } from '../../helpers/playSound'
+import ElliotSong from '../../music/ElliotTheme.ogg'
 
 const Farm = () => {
   const [index, setIndex] = useState(0);
@@ -81,6 +82,7 @@ useEffect(() => {
         break;
       case 18:
         setShowScene('marriageScene')
+        playSound(ElliotSong)
         setTimeout(()=>{
           setDialogBoxEmpty(true)
         },6000)
@@ -112,7 +114,7 @@ useEffect(() => {
           
           {index === 11 ? <img src={Bear} className='absolute top-6 right-16 w-28 md:w-[160px] md:top-10 md:right-[5rem]' alt="Oso" /> : <img src={Ruma} className='absolute top-6 right-16 w-7 md:w-12 md:top-12 md:right-[8.3rem]' alt="Ruma" /> }
           <p className='absolute right-[4.75rem] bottom-[2.225rem] text-sm text-[#531A12] font-semibold md:text-3xl md:right-32 md:bottom-6'>{index ===  11 ? 'Oso' : 'Ruma'}</p>
-          {index + 1 < dialog.length && showButton && <button className='absolute cursorLoad w-8 h-4 top-[76%]  animate-pulse bottom-0 right-[42%]' onClick={handleClick}><img src={dialogButton} className='absolute' alt="" /></button>
+          {index + 1 < dialog.length && showButton && <button className='absolute cursorLoad w-8 h-4 top-[76%]  animate-pulse bottom-0 right-[42%]' onClick={handleClick}><img src={dialogButton} className='absolute  hover:scale-110' alt="dialog button box" /></button>
            }
            </>
 }

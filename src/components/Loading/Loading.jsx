@@ -4,23 +4,19 @@ import { useNavigate } from 'react-router-dom'
 import { playSound } from '../../helpers/playSound'
 import LoadingAnimation from '../Loading/LoadingAnimation'
 
-import Summer from '../../music/Summer.ogg'
+import MusicBox from '../../music/MusicBoxSong.ogg'
 import LoadingTips from './LoadingTips'
 
 const Loading = () => {
  
 
     const navigate = useNavigate()
+
     useEffect(()=>{
-
-
         setTimeout(()=>{
-            playSound(Summer)
+            playSound(MusicBox)
             navigate('/farm')
         },4000)
-
-
-
     },[navigate])
 
 
