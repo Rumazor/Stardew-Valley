@@ -172,7 +172,7 @@ content: ' ';
 .marriageScene {
 height: 100vh;
   opacity: 0;
-  animation: fadeIn 7s ease-in-out forwards;
+  animation: fadeIn 8s ease-in-out forwards;
 }
 .marriageScene::before{
 content: ' ';

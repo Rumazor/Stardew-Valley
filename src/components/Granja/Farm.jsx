@@ -9,19 +9,21 @@ import { useState } from 'react'
 import SmallSelect from '../../music/smallSelect.wav'
 import { playSound } from '../../helpers/playSound'
 import ElliotSong from '../../music/ElliotTheme.ogg'
+import { useNavigate } from 'react-router-dom'
 
 const Farm = () => {
-  const [index, setIndex] = useState(0);
-  const [dialog] = useState(['Hola amor, se que todo esto es muy raro pero no te preocupes, dame un momento y te explicare de que va esto.', 'Veras hemos hecho un monton de cosas aqui en stardew valley asi que...', '¿Por que no mejor damos un  recorrido de como empezo todo?.', '¿Recuerdas? empezamos sin nada, solo habia piedra, monte y hierva :v', 'Pasamos horas y horas quitando todo eso para abrir paso a lo que seria nuestra granja.', 'Ir a la ciudad para hacer algunas misiones, obtener monedas y comprar semillas.', 'Era un trabajo riguroso regar nuestras cosechas al principio  pero con trabajo duro fue resultando como esperabamos.', 'Adentrarnos a la cueva fue facil al comienzo pero poco a poco descender era mas retador.', 'Era divertido y a la vez adictivo querer seguir bajando cada vez mas y mas, incluso nos desmayamos varias veces por no llegar a tiempo a nuestra casa.', 'Me gustaba mucho pescar ¡incluso atrape uno legendario!, y tu siempre me recordabas revisar las trampas.', 'Tampoco olvidemos tu peculiar encuentro con el oso, estoy seguro que el se acuerda de ti.', '¡Por supuesto! Me tragiste mi salsa favorita, eres demasiado genial como para olvidarte.','El primer invierno nos tomo de sorpresa, pero no el segundo, ya estabamos preparados con reservas de heno.','Creo que mi mapa favorito es este jeje.','Otoño fue la ultima estación que jugamos.','Todavia hay mas cosas que explorar, mas cosas por ver, mas cosas que descubrir y mas cosas que desbloquear.','Como sabes, no soy bueno dando regalos y ME CUESTA MUCHO matener una sorpresa.', 'Pero reserve esto para ti.','¡Te quiero mucho amor!']);
+  const [index, setIndex] = useState(17);
+  const [dialog] = useState(['Hola amor, se que todo esto es muy raro pero no te preocupes, dame un momento y te explicare de que va esto.', 'Veras hemos hecho un monton de cosas aqui en stardew valley asi que...', '¿Por que no mejor damos un  recorrido de como empezo todo?.', '¿Recuerdas? empezamos sin nada, solo habia piedra, monte y hierva :v', 'Pasamos horas y horas quitando todo eso para abrir paso a lo que seria nuestra granja.', 'Ir a la ciudad para hacer algunas misiones, obtener monedas y comprar semillas.', 'Era un trabajo riguroso regar nuestras cosechas al principio  pero con trabajo duro fue resultando como esperabamos.', 'Adentrarnos a la cueva fue facil al comienzo pero poco a poco descender era mas retador.', 'Era divertido y a la vez adictivo querer seguir bajando cada vez mas y mas, incluso nos desmayamos varias veces por no llegar a tiempo a nuestra casa.', 'Me gustaba mucho pescar ¡incluso atrape uno legendario!, y tu siempre me recordabas revisar las trampas.', 'Tampoco olvidemos tu peculiar encuentro con el oso, estoy seguro que el se acuerda de ti.', '¡Por supuesto! Me tragiste mi salsa favorita, eres demasiado genial como para olvidarte.','El primer invierno nos tomo de sorpresa, pero no el segundo, ya estabamos preparados con reservas de heno.','Creo que mi mapa favorito es este jeje.','Otoño fue la ultima estación que jugamos.','Todavia hay mas cosas que explorar, mas cosas por ver, mas cosas que descubrir y mas cosas que desbloquear.','Como sabes, no soy bueno dando regalos y ME CUESTA MUCHO matener una sorpresa.', 'Pero reserve esto para ti.','¡Te quiero muchisimo amor! Gracias por jugar.']);
   const [text, setText] = useState(dialog[index]);
   const [displayText, setDisplayText] = useState('');
-
+  const navigate = useNavigate()
 
 
   const [scene] = useState('farmSceneUndone')
   const [showScene, setShowScene] = useState('')
   const [dialogBoxEmpty,setDialogBoxEmpty] = useState(false)
   const [showButton, setShowButton] = useState(false);
+  const [goBackButton, setGoBackMenu] = useState(false)
 
   const writeMessage = () => {
     if (index + 1 < dialog.length) {
@@ -86,6 +88,10 @@ useEffect(() => {
         setTimeout(()=>{
           setDialogBoxEmpty(true)
         },6000)
+
+        setTimeout(()=>{
+          setGoBackMenu(true)
+        },26000)
         break;
 
       default:
@@ -104,8 +110,15 @@ useEffect(() => {
        <div className={`relative mt-64 animate__animated animate__fadeInUp animate__slow `}>
         {dialogBoxEmpty && <> <img src={DialogBoxNoChar} alt="dialogBox" className=' w-[26rem] relative' />
         
-        <p className=' absolute max-w-[12.25rem] top-2 left-4 bottom-0 text-sm text-[#531A12] md:text-4xl md:left-10 md:top-4 md:max-w-[26rem]'>{displayText}</p>
+        <p className=' absolute max-w-[12.25rem] top-2  bottom-0 text-sm text-[#531A12] md:text-4xl md:left-6 md:top-4 md:max-w-[26rem]'>{displayText}</p>
+
+       {goBackButton &&  <button onClick={()=>{
+        playSound(SmallSelect)
+        navigate('/')
+       }} className='absolute  left-0 right-0  bottom-4 text-2xl text-[#531A12] hover:border-2 border-red-700 w-fit px-10 mx-auto '>Ir al menu</button>}
+       
         </> 
+        
         }
          <div>
         {index === 18 ||  
