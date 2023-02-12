@@ -1,9 +1,7 @@
 import React, { useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
-
 import { playSound } from '../../helpers/playSound'
 import LoadingAnimation from '../Loading/LoadingAnimation'
-
 import MusicBox from '../../music/MusicBoxSong.ogg'
 import LoadingTips from './LoadingTips'
 
