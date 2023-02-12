@@ -3,6 +3,7 @@ import routeReducer from "../src/features/novelRoutes/routeSlice";
 
 export const store = configureStore({
   reducer: {
-    testing: routeReducer,
+    playerInfo: routeReducer,
+    playerTree: "",
   },
 });

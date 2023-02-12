@@ -2,14 +2,14 @@
 import React, { useState } from "react";
 
 
-const LoadingDot1 = (...props) => (
+const LoadingDot1 = () => (
   <svg
     width={349}
     height={72}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    {...props}
+
   >
     <mask
       id="a"
@@ -51,14 +51,14 @@ const LoadingDot1 = (...props) => (
 
 );
 
-const LoadingDot2 = (...props) => (
+const LoadingDot2 = () => (
   <svg
     width={349}
     height={72}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    {...props}
+   
   >
     <mask
       id="a"
@@ -99,14 +99,14 @@ const LoadingDot2 = (...props) => (
   </svg>
 );
 
-const LoadingDot3 = (...props) => (
+const LoadingDot3 = () => (
     <svg
     width={349}
     height={72}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    {...props}
+ 
   >
     <mask
       id="a"

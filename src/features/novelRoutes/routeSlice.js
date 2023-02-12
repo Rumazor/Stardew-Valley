@@ -1,19 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: 0,
+  name: "Jugador",
 };
 
 export const testSlice = createSlice({
-  name: "testing",
+  name: "playerName",
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1;
+    setPlayerName: (state) => {
+      state.name = state;
     },
   },
 });
 
-export const { increment } = testSlice.actions;
+export const { setPlayerName } = testSlice.actions;
 
 export default testSlice.reducer;
