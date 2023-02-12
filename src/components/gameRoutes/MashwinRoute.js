@@ -11,7 +11,7 @@ import ElliotSong from "../../music/ElliotTheme.ogg";
 import "./mashwinRoute.css";
 
 const MashwinRoute = memo(() => {
-  const [index, setIndex] = useState(18);
+  const [index, setIndex] = useState(0);
   const [dialog] = useState([
     "Hola, sé que todo esto es muy raro, pero no te preocupes, dame un momento y te explicaré de que va esto.",
     "Verás hemos hecho un montón de cosas aquí en Stardew Valley así que...",
