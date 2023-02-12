@@ -15,7 +15,7 @@ const Loading = () => {
     useEffect(()=>{
         setTimeout(()=>{
             playSound(MusicBox)
-            navigate('/farm')
+            navigate('/mashwinRoute')
         },4000)
     },[navigate])
 

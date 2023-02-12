@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import "./components/Granja/granja.css";
 import "animate.css";
+import "./components/gameRoutes/mashwinRoute.css";
 import App from "./App";
 import { store } from "../src/store";
 import { Provider } from "react-redux";

@@ -2,7 +2,7 @@ import React,{useState, useEffect} from 'react'
 import LoadingTip from '../../assets/LoadingText.svg'
 import Chicken from '../../assets/chicken.svg'
 import KofiButton from '../../assets/kofi_button.svg'
-import './../Granja/granja.css'
+import './../gameRoutes/mashwinRoute.css'
 
 
 
