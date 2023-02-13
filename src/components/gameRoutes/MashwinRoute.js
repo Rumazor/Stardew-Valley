@@ -11,7 +11,7 @@ import ElliotSong from "../../music/ElliotTheme.ogg";
 import "./mashwinRoute.css";
 
 const MashwinRoute = memo(() => {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(6);
   const [dialog] = useState([
     "Hola, sé que todo esto es muy raro, pero no te preocupes, dame un momento y te explicaré de que va esto.",
     "Verás hemos hecho un montón de cosas aquí en Stardew Valley así que...",
@@ -34,7 +34,7 @@ const MashwinRoute = memo(() => {
 
     "Tampoco olvidemos tu peculiar encuentro con el oso, estoy seguro de que él se acuerda de ti.",
 
-    "¡Por supuesto! Me trajiste mi salsa favorita, eres demasiado genial como para olvidarte.",
+    "¡Por supuesto! Descifraste la nota secreta y me trajiste mi salsa favorita, ¿cómo podría olvidarme de ti? je,je,je.",
 
     "El primer invierno nos tomó de sorpresa, pero no el segundo, ya estábamos preparados con reservas de heno.",
 
@@ -180,19 +180,15 @@ const MashwinRoute = memo(() => {
                 <p className=" absolute max-w-[12.25rem] top-2 left-4 bottom-0 text-sm text-[#531A12] md:text-3xl md:left-6 md:top-4 md:max-w-[26rem]">
                   {displayText}
                 </p>
-                {index === 11 ? (
-                  <img
-                    src={Bear}
-                    className="absolute top-6 right-16 w-28 md:w-[160px] md:top-10 md:right-[5rem]"
-                    alt="Oso"
-                  />
-                ) : (
-                  <img
-                    src={Ruma}
-                    className="absolute top-6 right-16 w-7 md:w-12 md:top-12 md:right-[8.3rem]"
-                    alt="Ruma"
-                  />
-                )}
+                <img
+                  src={index === 11 ? Bear : Ruma}
+                  className={`${
+                    index === 11
+                      ? "absolute top-6 right-16 w-28 md:w-[10rem] md:top-10 md:right-[5rem] transition-all"
+                      : "absolute top-6 right-16 w-7 md:w-12 md:top-12 md:right-[8.3rem]"
+                  }`}
+                  alt="Ruma"
+                />
                 <p className="absolute right-[4.75rem] bottom-[2.225rem] text-sm text-[#531A12] font-semibold md:text-3xl md:right-32 md:bottom-6">
                   {index === 11 ? "Oso" : "Ruma"}
                 </p>
