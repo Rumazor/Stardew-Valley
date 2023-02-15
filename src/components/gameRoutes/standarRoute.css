@@ -1,0 +1,18 @@
+
+.menu-font{
+    font-family: 'Stardew-Valley_Menu',sans-serif;
+    font-weight: 600;
+}
+
+.farm-font {
+    font-family: 'Stardew-Valley',sans-serif;
+}
+
+/* .createCharacterBg {
+     background: url('../../assets/createCharacter/createCharacterBg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+        height: 80rem;
+       
+} */

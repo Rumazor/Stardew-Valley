@@ -24,7 +24,7 @@ const PlayerForm = () => {
   };
 
   return (
-    <form className="absolute  bottom-0 right-0" onSubmit={handleSubmit}>
+    <form className=" farm-font w-[90%] " onSubmit={handleSubmit}>
       <label htmlFor="name">Nombre:</label>
       <input
         type="text"

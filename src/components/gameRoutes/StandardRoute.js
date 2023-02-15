@@ -1,19 +1,20 @@
 import React from "react";
 import PlayerForm from "../ui/PlayerForm";
-import ModalCreateCharacter from "../../assets/createCharacter/ModalCreate Character.png";
+import createCharacterBg from "../../assets/createCharacter/createCharacterBg.png";
+import "./standarRoute.css";
 
 const standardRoute = () => {
   return (
     <div className="bg-black h-screen grid place-content-center">
       <div className="animate__animated animate__fadeIn animate__slower p-4">
         <div>
-          <h1 className="absolute top-12 left-[30%] z-40">Crea tu personaje</h1>
-          <img
-            src={ModalCreateCharacter}
-            className="relative h-[40rem]"
-            alt=""
-          />
-          <PlayerForm />
+          <img src={createCharacterBg} className="relative h-[40rem]" alt="" />
+          <div className="flex flex-col justify-center items-center top-12  w-[90%] absolute">
+            <h1 className=" z-40  text-center farm-font font-semibold text-2xl text-[#853605]">
+              Crea tu personaje
+            </h1>
+            <PlayerForm />
+          </div>
         </div>
       </div>
     </div>
