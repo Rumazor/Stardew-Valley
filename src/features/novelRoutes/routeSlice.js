@@ -1,19 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  name: "Jugador",
+  route: "noSelected",
 };
 
 export const testSlice = createSlice({
-  name: "playerName",
+  name: "PlayableRoutes",
   initialState,
   reducers: {
-    setPlayerName: (state) => {
-      state.name = state;
+    setStandardRoute: (state) => {
+      state.route = "/standardRoute";
+    },
+    setMashWinRoute: (state) => {
+      state.route = "/mashwinRoute";
     },
   },
 });
 
-export const { setPlayerName } = testSlice.actions;
+export const { setMashWinRoute, setStandardRoute } = testSlice.actions;
 
 export default testSlice.reducer;

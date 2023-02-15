@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {AiOutlineLinkedin, AiOutlineGithub , AiOutlineTwitter} from 'react-icons/ai'
 import {SiKofi} from 'react-icons/si'
+import {setMashWinRoute,setStandardRoute} from '../../features/novelRoutes/routeSlice'
+import { useDispatch} from 'react-redux'
 
 import bigSelect from '../../music/bigSelect.wav'
 import bigDeSelect from '../../music/bigDeSelect.wav'
@@ -10,17 +12,18 @@ import loadGame from '../../assets/LoadGame.svg'
 import LoadingAnimation from '../Loading/LoadingAnimation'
 import Logo from '../../assets/Logo.svg'
 import backButton from '../../assets/backButton.svg'
-import RumaRoute from '../../assets/RumaRoute.svg'
-import RaquelRoute from '../../assets/RaquelRoute.svg'
+import StandardRoute from '../../assets/StandardRoute.svg'
+import MashwinRoute from '../../assets/MashwinRoute.svg'
 import LoadingTips from '../Loading/LoadingTips'
-
 import './menu.css'
 
+
 const Menu = () => {
-const [loading, setLoading] = useState(true)
-const [isOpen, setIsOpen] = useState(false);
-const handleOpen = () => setIsOpen(true);
-const handleClose = () => setIsOpen(false);
+  const [loading, setLoading] = useState(true)
+  const [isOpen, setIsOpen] = useState(false);
+  const handleOpen = () => setIsOpen(true);
+  const handleClose = () => setIsOpen(false);
+  const dispatch = useDispatch()
 
 const playAudio = (audioFile) => {
 const audio = new Audio(audioFile);
@@ -72,9 +75,13 @@ return (
             </div>
             <div
               className="bg-white rounded-lg shadow-xl transform transition-all sm:max-w-lg sm:w-full modal h-[31.1875rem] min-w-[52rem]  ">
-                  <img src={RumaRoute}  className='absolute top-0 p-3 right-0 left-0 hover:brightness-110 transition-all cursorLoad' alt="Ruma Route" />
-                  <img src={RaquelRoute} onClick={() =>{
-                     navigate("/Loading")
+                  <img src={StandardRoute} onClick={() =>{
+                    navigate('/Loading')
+                    dispatch(setStandardRoute())
+                  }}  className='absolute top-0 p-3 right-0 left-0 hover:brightness-110 transition-all cursorLoad' alt="Ruma Route" />
+                  <img src={MashwinRoute} onClick={() =>{
+                    navigate('/Loading')
+                    dispatch(setMashWinRoute())
                   }}className='absolute top-[7.56rem] p-3 right-0 left-0 hover:brightness-110 transition-all cursorLoad' alt="Mashwim route" />
             </div>
              <button type="button"
