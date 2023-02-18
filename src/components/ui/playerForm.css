@@ -1,0 +1,38 @@
+.inputImage{
+      background: url('../../assets/createCharacter/inputImage.png');
+    background-size:contain ;
+    background-repeat: no-repeat;
+
+}
+
+.inputImage:focus{
+    filter: brightness(110%);
+    transition: all .5s ;
+}
+
+
+.box-label {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+/* Style for the box container */
+.box-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the box */
+.box {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+}
+
+/* Style for the checked box */
+.box.checked {
+  background-color: #2196f3;
+  border-color: #2196f3;
+}

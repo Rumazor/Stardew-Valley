@@ -19,11 +19,11 @@ export const playerSlice = createSlice({
         karma: 1,
       };
     },
-    setPlayerName: (state, action) => {
+    setPlayerForm: (state, action) => {
       state.playerInfo = action.payload;
     },
   },
 });
 
-export const { setPlayerName } = playerSlice.actions;
+export const { setPlayerForm } = playerSlice.actions;
 export default playerSlice.reducer;
