@@ -76,8 +76,8 @@ return (
             <div
               className="bg-white rounded-lg shadow-xl transform transition-all sm:max-w-lg sm:w-full modal h-[31.1875rem] min-w-[52rem]  ">
                   <img src={StandardRoute} onClick={() =>{
-                    navigate('/Loading')
-                    dispatch(setStandardRoute())
+                    // navigate('/Loading')
+                    // dispatch(setStandardRoute())
                   }}  className='absolute top-0 p-3 right-0 left-0 hover:brightness-110 transition-all cursorLoad' alt="Ruma Route" />
                   <img src={MashwinRoute} onClick={() =>{
                     navigate('/Loading')
